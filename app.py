@@ -62,7 +62,7 @@ st.write(f"Le pays avec les ventes les plus élevées est : {top_country}")
 
 # Objectif 5: Tendance des Ventes en Fonction du Temps (regroupé par mois)
 st.header('Tendance des Ventes en Fonction du Temps (par mois)')
-locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
+#locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
 monthly_revenue = data.resample('MS', on='Transaction Date')['CA Vente'].sum()
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(monthly_revenue.index, monthly_revenue.values, label='Chiffre d\'affaires mensuel', color='blue')
